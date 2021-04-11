@@ -77,6 +77,18 @@ else
             }
                 $result = pg_query($connect, $sql);
                 while ($dados = pg_fetch_array($result)):
+                    $estilo="Pagode";
+                    if($dados['estilo']=='1'):
+                        $estilo='Rock';
+                    elseif($dados['estilo']=='2'):
+                        $estilo='Sertanejo';
+                    elseif($dados['estilo']=='4'):
+                        $estilo='Eletrônica';
+                    elseif($dados['estilo']=='5'):
+                        $estilo='Funk';
+                    elseif($dados['estilo']=='6'):
+                        $estilo='MPB';         
+                        
                 ?>    
                   
 
