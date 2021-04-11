@@ -5,8 +5,8 @@ $response = array();
 
 $login = trim($_POST['login']);
 $senha = trim($_POST['senha']);
-error_log(_$POST['login']);
-error_log(_$POST['senha']);
+error_log($_POST['login']);
+error_log($_POST['senha']);
 error_log($login);
 error_log($senha);
 //Conexão
