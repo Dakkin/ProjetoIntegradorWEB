@@ -5,6 +5,10 @@ $response = array();
 
 $login = trim($_POST['login']);
 $senha = trim($_POST['senha']);
+error_log(_$POST['login']);
+error_log(_$POST['senha']);
+error_log($login);
+error_log($senha);
 //Conexão
 include_once 'db_connect.php';
 // A variavel $result pega as varias $login e $senha, faz uma
