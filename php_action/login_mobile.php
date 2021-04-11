@@ -3,8 +3,8 @@
 
 $response = array();
 
-$login = trin($_POST['login']);
-$senha = trin($_POST['senha']);
+$login = trim($_POST['login']);
+$senha = trim($_POST['senha']);
 //Conexão
 include_once 'db_connect.php';
 // A variavel $result pega as varias $login e $senha, faz uma
