@@ -98,7 +98,7 @@ else
 
                         <td><?php echo $dados['descricao']; ?></td>
                         <td><?php echo $dados['nome']; ?></td>
-                        <td><?php echo $dados['estilo']; ?></td>
+                        <td><?php echo $estilo; ?></td>
                         <td><?php echo $dados['spotify']; ?></td>
                         <td><?php echo $dados['instrumentos']; ?></td>
                         <td><?php echo $dados['cache_minimo']; ?></td>
