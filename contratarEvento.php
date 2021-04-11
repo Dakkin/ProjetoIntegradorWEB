@@ -89,7 +89,8 @@ else
                     elseif($dados['estilo']=='6'):
                         $estilo='MPB';     
                     else:
-                        $estilo ='Pagode';   
+                        $estilo ='Pagode';
+                    endif;   
             ?>    
                   
 
