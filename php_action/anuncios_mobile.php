@@ -1,6 +1,6 @@
 <?php
 
-$login = trim($_POST['login']);
+$login = trim($_GET['login']);
 require_once 'db_connect.php';
 $response = array();
 
@@ -11,23 +11,25 @@ if(pg_num_rows($result) > 0){
 
     while ($row = pg_fetch_array($result)){
         $anuncio = array();
-        $anuncio["Idanuncio"] = $row['idanuncio'];
+        $anuncio["idanuncio"] = $row['idanuncio'];
         $anuncio['nome'] = $row['nome'];
         $anuncio['estilo'] = $row['estilo'];
-        $anuncio['cache'] = $row['cache_minimo'];
+        $anuncio['cache_minimo'] = $row['cache_minimo'];
         $anuncio['foto'] = $row['foto'];
 
         array_push($response["anuncios"], $anuncio);
     }
 
-    $response["success"] = "1";
+    $response["sucesso"] = "1";
 
     pg_close($connect);
 
     echo json_encode($response);
 
 }else {
-    $response['success'] = 0;
+    $response['sucesso'] = 0;
+    $response["erro"] = "Não foi possível achar anuncios";
+
 
     pg_close($connect);
 
