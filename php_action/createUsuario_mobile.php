@@ -11,7 +11,7 @@ if (isset($_POST['login']) && isset($_POST['senha']) && isset($_POST['email']) &
     $data_nascimento = trim($_POST['data_nascimento']);
     
 
-    $result = pg_query($connect, "INSERT INTO usuario (nome, data_nascimento, email, telefone, login, senha) VALUES ('$nome','$data_nascimento','$email', '$telefone', '$login','$senha'))";
+    $result = pg_query($connect, "INSERT INTO usuario (nome, data_nascimento, email, telefone, login, senha) VALUES ('$nome','$data_nascimento','$email', '$telefone', '$login','$senha')");
 		if ($result) {
 			$response["success"] = 1;
 		}
