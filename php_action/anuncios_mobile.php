@@ -1,10 +1,16 @@
 <?php
 
 $login = trim($_GET['login']);
+
 require_once 'db_connect.php';
 $response = array();
-
-$result = pg_query($connect, "SELECT anuncio.*, usuario.nome FROM anuncio inner join usuario on anuncio.usuario_login = usuario.login WHERE anuncio.usuario_login != '$login' order by nome");
+if(isset($_GET['estilo'])){
+    $sql = "SELECT anuncio.*, usuario.nome FROM anuncio inner join usuario on anuncio.usuario_login = usuario.login WHERE anuncio.usuario_login != '$login' AND anuncio.estilo = '$estilo'  order by nome";
+} 
+else{              
+    $sql = "SELECT anuncio.*, usuario.nome FROM anuncio inner join usuario on anuncio.usuario_login = usuario.login WHERE anuncio.usuario_login != '$login' order by nome";
+}
+$result = pg_query($connect, $sql);
 
 if(pg_num_rows($result) > 0){
     $response["anuncios"] = array();
