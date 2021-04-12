@@ -9,7 +9,7 @@ if(isset($_POST['btn-cadastrar'])):
     $telefone = pg_escape_string($connect, $_POST['telefone']);
     $login = pg_escape_string($connect, $_POST['login']);
     $senha = pg_escape_string($connect, $_POST['senha']);
-    $sql = "INSERT INTO usuario (nome, data_nascimento, email, telefone, login, senha) VALUES ('$nome','$data_nascimento','$email', '$telefone', '$login', $senha)";
+    $sql = "INSERT INTO usuario (nome, data_nascimento, email, telefone, login, senha) VALUES ('$nome','$data_nascimento','$email', '$telefone', '$login', '$senha')";
     if (pg_query($connect, $sql)):
         header('Location: ../index.php?sucesso');
     else:
