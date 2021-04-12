@@ -17,6 +17,8 @@ if (isset($_POST['login']) && isset($_POST['senha']) && isset($_POST['email']) &
 		}
 		else {
 			$response["success"] = 0;
+			$response["error"] = "Error BD: ".pg_last_error($connect);
+
         }
 
 pg_close($connect);
