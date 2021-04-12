@@ -1,4 +1,6 @@
 <?php
+// Verifica se existe a sessão com usuario logado
+session_start();
     //Header
     //include_once 'includes/header.php';
     if(isset($_SESSION['nome'])){
@@ -7,8 +9,7 @@
       include_once("includes/header.php");
   }
 
-// Verifica se existe a sessão com usuario logado
-session_start();
+
 if (!isset ($_SESSION['login']) and !isset ($_SESSION['senha']) )
 {
     unset($_SESSION['nome']);
