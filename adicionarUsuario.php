@@ -15,7 +15,7 @@
                 <label for="data_nascimento">Data de Nascimento</label>
             </div>
             <div class="input-field col s12">
-                <input type="text" name="email" id="email">
+                <input type="email" name="email" id="email">
                 <label for="email">E-mail</label>
             </div>
             <div class="input-field col s12">

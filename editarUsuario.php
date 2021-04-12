@@ -29,7 +29,7 @@
                 <label for="email">E-mail</label>
             </div>
             <div class="input-field col s12">
-                <input type="tel" name="telefone" id="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="XX-XXXXX-XXXX"value="<?php echo $dados['telefone']?>">
+                <input type="tel" name="telefone" id="telefone" placeholder="XX-XXXXX-XXXX"value="<?php echo $dados['telefone']?>">
                 <label for="telefone">Telefone</label>
             </div>
             <div class="input-field col s12">
