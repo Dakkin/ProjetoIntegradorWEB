@@ -2,9 +2,9 @@
     //Header
     //include_once 'includes/header.php';
     if(isset($_SESSION['nome'])){
-      require_once("includes/header-signedin.php");
+      include_once("includes/header-signedin.php");
   }else{  
-      require_once("includes/header.php");
+      include_once("includes/header.php");
   }
 
 // Verifica se existe a sessão com usuario logado
