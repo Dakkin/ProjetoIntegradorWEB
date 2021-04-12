@@ -19,33 +19,33 @@ else
   <div class="row">
     <div class="col s12 m6 push-m3">
         <h3 class="light">Filtrar por Estilos</h3>
-        <form action="contratarEvento.php" method="GET"> 
+        <form style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="1" name="estilo">
         <button type="submit" name="btn-rock" class="btn blue">Rock</button>
         </form>
 
-        <form action="contratarEvento.php" method="GET"> 
+        <form style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="2" name="estilo">
         <button type="submit" name="btn-sertanejo" class="btn blue">Sertanejo</button>
         </form>
 
-        <form action="contratarEvento.php" method="GET"> 
+        <form  style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="3" name="estilo">
         <button type="submit" name="btn-pagode" class="btn blue">Pagode</button>
         </form>
 
-        <form action="contratarEvento.php" method="GET"> 
+        <form style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="4" name="estilo">
         <button type="submit" name="btn-eletrônica" class="btn blue">Eletrônica</button>
         </form>
 
 
-        <form action="contratarEvento.php" method="GET"> 
+        <form style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="5" name="estilo">
         <button type="submit" name="btn-Funk" class="btn blue">Funk</button>
         </form>
 
-        <form action="contratarEvento.php" method="GET"> 
+        <form style="display: inline;" action="contratarEvento.php" method="GET"> 
         <input type="hidden" value="6" name="estilo">
         <button type="submit" name="btn-mpb" class="btn blue">MPB</button>
         </form>
