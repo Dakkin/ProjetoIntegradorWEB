@@ -23,7 +23,7 @@
             <ul class="right hide-on-med-and-down">
                 
                 <li><a href="index.php">Início</a></li>
-                <?php if(!isset($_SESSION['login']) and !isset($_SESSION['senha'])):?>
+                <?php if(isset($_SESSION['login']) and isset($_SESSION['senha'])):?>
                 <li><a href="anuncio.php">Meu Anúncio</a></li>
                 <li><a href="contratarEvento.php">Contratar evento</a></li>
                 <li><a href="meusEventos.php">Meus Eventos</a></li>
