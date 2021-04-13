@@ -1,8 +1,8 @@
 <?php
 require_once 'db_connect.php';
 $response = array();
-if (isset($_POST['login'])){
-    $login = trim($_POST['login']);
+if (isset($_GET['login'])){
+    $login = trim($_GET['login']);
     $sql = "SELECT * FROM usuario WHERE login = $login";
 }
 $result = pg_query($connect, $sql);
