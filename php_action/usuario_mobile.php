@@ -2,6 +2,7 @@
 require_once 'db_connect.php';
 $response = array();
 if (isset($_GET['login'])){
+    error_log($_GET['login']);
     $login = trim($_GET['login']);
     $sql = "SELECT * FROM usuario WHERE login = '$login'";
 }
