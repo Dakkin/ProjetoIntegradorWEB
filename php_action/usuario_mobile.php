@@ -8,12 +8,13 @@ if (isset($_GET['login'])){
 }
 $result = pg_query($connect, $sql);
 if(pg_num_rows($result) > 0){
+    $row = pg_fetch_array($result);
     $response["usuario"] = array();    
     $usuario = array();
-    $usuario["data_nascimento"] = ['data_nascimento'];
-    $usuario['nome'] = ['nome'];
-    $usuario['email'] = ['email'];
-    $usuario['telefone'] = ['telefone'];   
+    $usuario["data_nascimento"] = $row['data_nascimento'];
+    $usuario['nome'] = $row['nome'];
+    $usuario['email'] = $row['email'];
+    $usuario['telefone'] = $row['telefone'];   
 
     array_push($response["usuario"], $usuario);
     
