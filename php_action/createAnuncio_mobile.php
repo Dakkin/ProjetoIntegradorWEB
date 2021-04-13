@@ -27,4 +27,8 @@ else:
     $response['sucesso'] = 0;
     $response['erro'] = "Faltam parâmetros no anúncio";
 endif; 
+
+pg_close($connect);
+
+echo json_encode($response);
 ?>
