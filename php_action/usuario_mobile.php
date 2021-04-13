@@ -10,10 +10,10 @@ $result = pg_query($connect, $sql);
 if(pg_num_rows($result) > 0){
     $response["usuario"] = array();    
     $usuario = array();
-    $data_nascimento=["data_nascimento"] = $row['data_nascimento'];
-    $nome['nome'] = $row['nome'];
-    $email['email'] = $row['email'];
-    $telefone['telefone'] = $row['telefone'];   
+    $usuario["data_nascimento"] = $row['data_nascimento'];
+    $usuario['nome'] = $row['nome'];
+    $usuario['email'] = $row['email'];
+    $usuario['telefone'] = $row['telefone'];   
 
     array_push($response["usuario"], $usuario);
     
