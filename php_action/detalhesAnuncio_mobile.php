@@ -15,10 +15,11 @@ if (isset($_GET['idanuncio'])){
         $anuncio['cache_minimo'] = $row['cache_minimo'];
         $anuncio['descricao'] = $row['descricao'];
         $anuncio['foto'] = $row['foto'];
-        $sqlusuario = "SELECT email FROM usuario WHERE login = $row['usuario_login']"
+        $sqlusuario = "SELECT email, nome FROM usuario WHERE login = $row['usuario_login']";
         $resultUsuario = pg_query($connect, $sqlusuario);
         $rowUsuario = pg_fetch_array($resultUsuario);
         $anuncio['email'] = $rowUsuario['email'];
+        $anuncio['nome'] = $rowUsuario['nome'];
 
 
         array_push($response["anuncio"], $anuncio);
