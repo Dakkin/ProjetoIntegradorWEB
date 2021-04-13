@@ -3,7 +3,7 @@ require_once 'db_connect.php';
 $response = array();
 if (isset($_POST['login'])){
     $login = trim($_POST['login']);
-    $sql = "SELECT * FROM usuario WHERE login = $login"
+    $sql = "SELECT * FROM usuario WHERE login = $login";
 }
 $result = pg_query($connect, $sql);
 if(pg_num_rows($result) > 0){
